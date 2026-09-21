@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DNOONG 摄影作品集｜人像、空间与生活影像。" />
+    <title>DNOONG — 摄影作品集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="DNOONG 首页">DNOONG<span>®</span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#works" data-i18n="navWorks">作品</a><a href="#about" data-i18n="navAbout">关于</a><a href="#contact" data-i18n="navContact">联系</a>
+      </nav>
+      <button class="language-switch" id="languageSwitch" type="button" aria-label="切换语言">EN</button>
+      <button class="menu-button" id="menuButton" type="button" aria-label="打开菜单"><span></span><span></span></button>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="heroEyebrow">摄影师 / 视觉叙事</p>
+          <h1 id="heroTitle"><span data-i18n="heroTitleA">记录</span><br /><em data-i18n="heroTitleB">值得记住的光。</em></h1>
+          <p class="hero-intro" data-i18n="heroIntro">以人为线索，以光为语言，记录真实而有温度的瞬间。</p>
+          <div class="hero-actions"><a class="button button-dark" href="#works"><span data-i18n="explore">浏览作品</span><i>↘</i></a><a class="quiet-link" href="#about" data-i18n="moreAbout">认识我</a></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image" role="img" aria-label="精选摄影作品"></div>
+          <div class="hero-caption"><span data-i18n="heroCaption">精选影像 · 2024</span><span>01 / 06</span></div>
+          <a class="profile-card" href="#about" aria-label="查看个人简介"><div class="avatar"></div><div><small data-i18n="profileLabel">摄影师</small><strong>DNOONG</strong></div><span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="quick-links" aria-label="快捷入口">
+        <a href="#works"><span>01</span><strong data-i18n="quickWorks">全部作品</strong><i>↗</i></a>
+        <a href="#about"><span>02</span><strong data-i18n="quickAbout">个人简介</strong><i>↗</i></a>
+        <a href="#contact"><span>03</span><strong data-i18n="quickContact">合作联系</strong><i>↗</i></a>
+        <div class="quick-note"><span class="status-dot"></span><span data-i18n="availability">2024 / 接受新项目</span></div>
+      </section>
+
+      <section class="intro-strip"><p class="kicker" data-i18n="introKicker">从现场出发</p><p data-i18n="introText">人像、空间、品牌与日常。我希望每一组照片都保留现场的呼吸感。</p><span>↓</span></section>
+
+      <section class="section works-section" id="works" aria-labelledby="worksTitle">
+        <div class="section-heading"><div><p class="kicker" data-i18n="selected">精选项目</p><h2 id="worksTitle" data-i18n="worksTitle">作品集</h2></div><div class="filter-row" id="filters" aria-label="作品分类"></div></div>
+        <div class="works-grid" id="worksGrid"></div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="aboutTitle">
+        <div class="about-portrait image-two" role="img" aria-label="摄影师肖像"></div>
+        <div class="about-copy"><p class="kicker" data-i18n="aboutEyebrow">关于摄影师</p><h2 id="aboutTitle"><span data-i18n="aboutTitleA">让光线</span><br /><em data-i18n="aboutTitleB">留下温度。</em></h2><div class="about-body" id="aboutBody"></div><div class="about-meta" id="aboutMeta"></div><a class="button button-light" href="#contact"><span data-i18n="workTogether">开始一个项目</span><i>↗</i></a></div><div class="about-mark" aria-hidden="true">D</div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contactTitle"><div><p class="kicker" data-i18n="contactEyebrow">合作与联系</p><h2 id="contactTitle"><span data-i18n="contactTitleA">有一个故事</span><br /><em data-i18n="contactTitleB">想要被看见？</em></h2></div><div class="contact-info"><p data-i18n="contactIntro">欢迎合作委托、品牌视觉与私人肖像项目。</p><a class="contact-email" id="contactEmail" href="mailto:hello@dnoong.com">hello@dnoong.com</a><div class="socials" id="socials"></div></div></section>
+    </main>
+
+    <footer class="site-footer"><span>© <span id="year"></span> DNOONG STUDIO</span><a href="#top" data-i18n="backTop">回到顶部 ↑</a><a class="manage-link" href="manage.html" data-i18n="manageWorks">管理作品</a><span data-i18n="footerNote">影像，作为一种记忆。</span></footer>
+    <dialog class="lightbox" id="lightbox"><button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭">×</button><div class="lightbox-image" id="lightboxImage"></div><div class="lightbox-caption"><span id="lightboxTitle"></span><span id="lightboxCount"></span></div></dialog>
+    <script src="content.js"></script><script src="script.js"></script>
+  </body>
+</html>

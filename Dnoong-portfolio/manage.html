@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>管理作品 — DNOONG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="manage.css" />
+  </head>
+  <body>
+    <header class="manage-header"><a href="index.html">← 返回作品集</a><span>DNOONG / STUDIO</span><span class="header-note">CONTENT MANAGER</span></header>
+    <main class="manage-shell">
+      <div class="manage-intro"><div><p class="kicker">CONTENT MANAGER</p><h1>管理你的作品</h1></div><p>上传照片、填写信息并保存。首页会自动读取这里的最新作品。</p></div>
+      <section class="manage-layout">
+        <form class="editor-card" id="workForm">
+          <div class="form-heading"><span>01</span><h2>添加新作品</h2></div>
+          <label class="upload-box" for="imageInput"><input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp" /><span class="upload-icon">＋</span><strong id="uploadText">选择一张照片</strong><small>JPG / PNG / WEBP，建议小于 4MB</small><div id="preview" class="preview"></div></label>
+          <label>作品名称（中文）<input id="titleInput" required placeholder="例如：无声之境" /></label>
+          <label>作品名称（English）<input id="englishInput" required placeholder="例如：Silent Grounds" /></label>
+          <div class="field-row"><label>分类<select id="categoryInput"><option>人像</option><option>空间</option><option>生活</option><option>品牌</option></select></label><label>年份<input id="yearInput" required value="2024" inputmode="numeric" /></label></div>
+          <button class="save-button" type="submit">保存到作品集 <span>↗</span></button>
+          <p class="status" id="status" role="status"></p>
+        </form>
+        <section class="list-card"><div class="form-heading"><span>02</span><h2>当前作品</h2><button id="resetButton" type="button">恢复默认</button></div><div id="projectList" class="project-list"></div></section>
+      </section>
+      <p class="manage-tip">提示：作品数据保存在这台设备的浏览器中。若更换浏览器或清除网站数据，新增作品也会被清除；正式上线前建议保留原图备份。</p>
+    </main>
+    <script src="content.js"></script><script src="manage.js"></script>
+  </body>
+</html>
